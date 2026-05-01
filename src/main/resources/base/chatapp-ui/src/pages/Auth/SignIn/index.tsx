@@ -43,7 +43,7 @@ const SignInPage: React.FC = () => {
 
       setCredentials({ email: "", password: "" });
       await fetchUserProfile();
-      navigate("/workspaces");
+      navigate("/app", { replace: true });
     },
     onError: (error: APIError) => {
       showError(

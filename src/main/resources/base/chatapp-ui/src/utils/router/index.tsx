@@ -35,6 +35,10 @@ const routes: RouteObject[] = [
     ],
   },
   {
+    path: "app",
+    element: <div>App</div>,
+  },
+  {
     path: "signin/oauth",
     element: <SSOCallback />,
   },

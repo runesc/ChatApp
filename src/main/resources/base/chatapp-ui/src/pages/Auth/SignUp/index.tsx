@@ -62,7 +62,7 @@ const SignUpPage: React.FC = () => {
           refresh_token: decodedToken.refresh_token,
         });
 
-        navigate("/workspaces");
+        navigate("/app", { replace: true });
       }
     },
     onError: (error: APIError) => {

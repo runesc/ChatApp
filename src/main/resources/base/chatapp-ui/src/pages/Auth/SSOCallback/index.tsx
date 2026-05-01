@@ -35,7 +35,7 @@ const SSOCallback: React.FC = () => {
   }, [partialToken, queryClient, fetchUserProfile]);
 
   if (partialToken) {
-    return <Navigate to="/workspaces" replace />;
+    return <Navigate to="/app" replace />;
   }
 
   return <Navigate to="/" replace />;
