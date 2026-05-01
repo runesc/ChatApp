@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-primary: #0e121b;
+  --background-body: oklch(0.98 0.003 247);
+}
+
+@layer base {
+  .dark {
+    --background-body: oklch(0.2 0.02 240);
+    --color-primary: oklch(100% 0.00011 271.152);
+  }
+
+  body {
+    background-color: var(--background-body);
+    color: var(--color-primary);
+    @apply transition-colors duration-300;
+  }
+}

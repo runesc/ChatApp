@@ -1,0 +1,13 @@
+{
+    "app_name": "Chatapp",
+    "author": "Neuri",
+    "main_module": "src/main/python/main.py",
+    "version": "1.0.0",
+    "binding": "PySide6",
+    "development": true,
+    "host": "http://localhost:5173",
+    "hidden_imports": [
+        "__future__"
+    ],
+    "public_settings": ["app_name", "author", "version", "development", "host"]
+}
