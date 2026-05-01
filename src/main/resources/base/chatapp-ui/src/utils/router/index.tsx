@@ -6,6 +6,9 @@ import SignUpPage from "../../pages/Auth/SignUp";
 import ForgotPassPage from "../../pages/Auth/ForgotPass";
 import CheckEmailPage from "../../pages/Auth/CheckMail";
 import PasswordResetPage from "../../pages/Auth/PasswordReset";
+import AppLayout from "../../layouts/AppLayout";
+
+import ProtectedRoute from "../../components/guards/ProtectedRoute";
 
 const routes: RouteObject[] = [
   {
@@ -36,7 +39,7 @@ const routes: RouteObject[] = [
   },
   {
     path: "app",
-    element: <div>App</div>,
+    element: <ProtectedRoute><AppLayout/></ProtectedRoute>,
   },
   {
     path: "signin/oauth",

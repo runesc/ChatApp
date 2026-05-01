@@ -1,6 +1,6 @@
 import sys
 from ppg_runtime.application_context.PySide6 import ApplicationContext
-from ppg_runtime.application_context import PPGLifeCycle, Pydux, init_lifecycle, BridgeManager
+from ppg_runtime.application_context import PPGLifeCycle, Pydux, init_lifecycle
 from ppg_runtime.application_context.devtools.reloader import hot_reloading
 from ppg_runtime.application_context.utils import app_is_frozen
 from PySide6.QtWidgets import QMainWindow, QWidget, QPushButton
@@ -9,6 +9,7 @@ from PySide6.QtCore import QUrl, Qt
 from utils.settings import get_public_settings
 from components.VBox import BoxLayout
 from pydantic import BaseModel
+
 class Settings(BaseModel):
     devTools: bool = False
 
