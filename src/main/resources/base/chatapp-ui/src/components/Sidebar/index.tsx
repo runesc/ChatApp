@@ -77,7 +77,7 @@ const Sidebar: React.FC = () => {
           menu
         </span>
       </div>
-      <div className="flex flex-col h-dvw overflow-y-auto">
+      <div className="flex flex-col overflow-y-auto chat-area">
         {NavLinks.map((link) => (
           <NavLink
             key={link.to}

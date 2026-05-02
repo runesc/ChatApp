@@ -40,6 +40,16 @@ const routes: RouteObject[] = [
   {
     path: "app",
     element: <ProtectedRoute><AppLayout/></ProtectedRoute>,
+    children: [
+      {
+        index: true,
+        element: <div>App Home</div>,
+      },
+      {
+        path: "chat/:id",
+        element: <div>Chat Page</div>,
+      }
+    ],
   },
   {
     path: "signin/oauth",

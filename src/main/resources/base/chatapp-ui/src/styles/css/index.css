@@ -19,3 +19,13 @@
     @apply transition-colors duration-300;
   }
 }
+
+@keyframes shake {
+  0% { transform: translate(0, 0); }
+  10%, 30%, 50%, 70%, 90% { transform: translate(-5px, 0); }
+  20%, 40%, 60%, 80% { transform: translate(5px, 0); }
+  100% { transform: translate(0, 0); }
+}
+.screen-shake {
+  animation: shake 0.5s ease-in-out 3;
+}
