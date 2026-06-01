@@ -9,6 +9,8 @@ import PasswordResetPage from "../../pages/Auth/PasswordReset";
 import AppLayout from "../../layouts/AppLayout";
 
 import ProtectedRoute from "../../components/guards/ProtectedRoute";
+import ChatApp from "../../pages/Chat/Conversation";
+import SplashScreen from "../../pages/Chat/Splash";
 
 const routes: RouteObject[] = [
   {
@@ -43,11 +45,11 @@ const routes: RouteObject[] = [
     children: [
       {
         index: true,
-        element: <div>App Home</div>,
+        element: <SplashScreen />,
       },
       {
         path: "chat/:id",
-        element: <div>Chat Page</div>,
+        element: <ChatApp />,
       }
     ],
   },

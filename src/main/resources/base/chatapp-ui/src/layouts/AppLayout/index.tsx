@@ -22,7 +22,7 @@ const AppLayout: React.FC = () => {
 
   return (
     <div className="flex gap-4">
-      <div className="w-[60px] flex-none ">
+      <div className="w-[60px] flex-none hidden md:block">
         <div className="bg-white dark:bg-zinc-800 rounded-lg flex flex-col h-dvh items-center gap-4 pt-3">
           <NavLink to="/app" className="w-[40px] h-[40px] cursor-pointer hover:bg-zinc-100 dark:hover:bg-zinc-700 rounded-md flex items-center justify-center">
             <i className="pi pi-inbox text-2xl" />
@@ -60,8 +60,7 @@ const AppLayout: React.FC = () => {
         </div>
       </div>
 
-      <div className="flex-1 ">
-
+      <div className="flex-1 hidden md:block">
         <Outlet />
       </div>
     </div>
