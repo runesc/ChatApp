@@ -5,9 +5,17 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>chatapp-ui</title>
+    <script src="./public/qwebchannel.min.js"></script>
   </head>
   <body class="dark">
     <div id="root"></div>
+    <button id="ask">Send Message</button>
+    <p id="output"></p>
     <script type="module" src="/src/main.tsx"></script>
+       <script>
+        new QWebChannel(qt.webChannelTransport, function (channel) {
+            window.bridge = channel.objects.bridge;
+        });
+    </script>
   </body>
 </html>
