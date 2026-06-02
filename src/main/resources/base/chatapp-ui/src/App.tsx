@@ -41,6 +41,7 @@ const App = () => {
                 const response = JSON.parse(responseJSON);
                 if (response.success) {
                   setHasSession(response.data as JWToken);
+                  secureLocalStorage.setItem("session", response.data);
                 } else {
                   setHasSession(null);
                 }
